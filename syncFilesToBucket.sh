@@ -92,7 +92,7 @@ if [ $# -eq 1 ]; then
 elif [ $# -eq 0 ]; then
     sync_all_files
 else
-    echo "❌ Invalid usage."
+    echo " Invalid usage."
     echo ""
     echo "Usage:"
     echo "   ./syncFilesToBucket.sh                → Sync all files to S3"
