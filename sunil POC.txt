@@ -1,0 +1,810 @@
+Authenticating with public key "Imported-Openssh-Key"
+    ┌──────────────────────────────────────────────────────────────────────┐
+    │                 • MobaXterm Personal Edition v25.1 •                 │
+    │               (SSH client, X server and network tools)               │
+    │                                                                      │
+    │ ⮞ SSH session to ubuntu@ec2-13-49-46-209.eu-north-1.compute.amazonaws.com          │
+    │   • Direct SSH      :  ✓                                             │
+    │   • SSH compression :  ✓                                             │
+    │   • SSH-browser     :  ✓                                             │
+    │   • X11-forwarding  :  ✓  (remote display is forwarded through SSH)  │
+    │                                                                      │
+    │ ⮞ For more info, ctrl+click on help or visit our website.            │
+    └──────────────────────────────────────────────────────────────────────┘
+
+Welcome to Ubuntu 24.04.4 LTS (GNU/Linux 6.17.0-1007-aws x86_64)
+
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/pro
+
+ System information as of Tue Apr 28 16:31:38 UTC 2026
+
+  System load:  0.0               Temperature:           -273.1 C
+  Usage of /:   58.8% of 6.71GB   Processes:             125
+  Memory usage: 36%               Users logged in:       0
+  Swap usage:   0%                IPv4 address for ens5: 172.31.20.60
+
+ * Ubuntu Pro delivers the most comprehensive open source security and
+   compliance features.
+
+   https://ubuntu.com/aws/pro
+
+Expanded Security Maintenance for Applications is not enabled.
+
+29 updates can be applied immediately.
+5 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+Enable ESM Apps to receive additional future security updates.
+See https://ubuntu.com/esm or run: sudo pro status
+
+
+*** System restart required ***
+Last login: Tue Apr 28 14:49:28 2026 from 49.36.68.84
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ sudo apt update && sudo apt install awscli -y
+Hit:1 http://eu-north-1.ec2.archive.ubuntu.com/ubuntu noble InRelease
+Get:2 http://eu-north-1.ec2.archive.ubuntu.com/ubuntu noble-updates InRelease [126 kB]
+Get:3 http://security.ubuntu.com/ubuntu noble-security InRelease [126 kB]
+Hit:4 http://eu-north-1.ec2.archive.ubuntu.com/ubuntu noble-backports InRelease
+Get:5 http://eu-north-1.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 Packages [1919 kB]
+Get:6 http://eu-north-1.ec2.archive.ubuntu.com/ubuntu noble-updates/main Translation-en [346 kB]
+Get:7 http://eu-north-1.ec2.archive.ubuntu.com/ubuntu noble-updates/universe amd64 Packages [1685 kB]
+Get:8 http://security.ubuntu.com/ubuntu noble-security/main amd64 c-n-f Metadata [11.0 kB]
+Get:9 http://security.ubuntu.com/ubuntu noble-security/universe amd64 c-n-f Metadata [23.1 kB]
+Fetched 4236 kB in 1s (4078 kB/s)
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+24 packages can be upgraded. Run 'apt list --upgradable' to see them.
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Package awscli is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+
+E: Package 'awscli' has no installation candidate
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ sudo apt update
+Hit:1 http://eu-north-1.ec2.archive.ubuntu.com/ubuntu noble InRelease
+Hit:2 http://eu-north-1.ec2.archive.ubuntu.com/ubuntu noble-updates InRelease
+Hit:3 http://eu-north-1.ec2.archive.ubuntu.com/ubuntu noble-backports InRelease
+Hit:4 http://security.ubuntu.com/ubuntu noble-security InRelease
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+24 packages can be upgraded. Run 'apt list --upgradable' to see them.
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ sudo apt install awscli -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Package awscli is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+
+E: Package 'awscli' has no installation candidate
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ sudo apt install aws-cli -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package aws-cli
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ sudo apt install awscli -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Package awscli is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+
+E: Package 'awscli' has no installation candidate
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ sudo apt install python3-pip -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+The following additional packages will be installed:
+  javascript-common libexpat1-dev libjs-jquery libjs-sphinxdoc libjs-underscore libpython3-dev libpython3.12-dev
+  python3-dev python3-wheel python3.12-dev
+Suggested packages:
+  apache2 | lighttpd | httpd
+The following NEW packages will be installed:
+  javascript-common libexpat1-dev libjs-jquery libjs-sphinxdoc libjs-underscore libpython3-dev libpython3.12-dev
+  python3-dev python3-pip python3-wheel python3.12-dev
+0 upgraded, 11 newly installed, 0 to remove and 24 not upgraded.
+Need to get 8331 kB of archives.
+After this operation, 39.9 MB of additional disk space will be used.
+Get:1 http://eu-north-1.ec2.archive.ubuntu.com/ubuntu noble/main amd64 javascript-common all 11+nmu1 [5936 B]
+Get:2 http://eu-north-1.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libexpat1-dev amd64 2.6.1-2ubuntu0.4 [140 kB]
+Get:3 http://eu-north-1.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libjs-jquery all 3.6.1+dfsg+~3.5.14-1 [328 kB]
+Get:4 http://eu-north-1.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libjs-underscore all 1.13.4~dfsg+~1.11.4-3 [118 kB]
+Get:5 http://eu-north-1.ec2.archive.ubuntu.com/ubuntu noble/main amd64 libjs-sphinxdoc all 7.2.6-6 [149 kB]
+Get:6 http://eu-north-1.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3.12-dev amd64 3.12.3-1ubuntu0.13 [5682 kB]
+Get:7 http://eu-north-1.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 libpython3-dev amd64 3.12.3-0ubuntu2.1 [10.3 kB]
+Get:8 http://eu-north-1.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 python3.12-dev amd64 3.12.3-1ubuntu0.13 [498 kB]
+Get:9 http://eu-north-1.ec2.archive.ubuntu.com/ubuntu noble-updates/main amd64 python3-dev amd64 3.12.3-0ubuntu2.1 [26.7 kB]
+Get:10 http://eu-north-1.ec2.archive.ubuntu.com/ubuntu noble/universe amd64 python3-wheel all 0.42.0-2 [53.1 kB]
+Get:11 http://eu-north-1.ec2.archive.ubuntu.com/ubuntu noble-updates/universe amd64 python3-pip all 24.0+dfsg-1ubuntu1.3 [1320 kB]
+Fetched 8331 kB in 0s (76.8 MB/s)
+Selecting previously unselected package javascript-common.
+(Reading database ... 118567 files and directories currently installed.)
+Preparing to unpack .../00-javascript-common_11+nmu1_all.deb ...
+Unpacking javascript-common (11+nmu1) ...
+Selecting previously unselected package libexpat1-dev:amd64.
+Preparing to unpack .../01-libexpat1-dev_2.6.1-2ubuntu0.4_amd64.deb ...
+Unpacking libexpat1-dev:amd64 (2.6.1-2ubuntu0.4) ...
+Selecting previously unselected package libjs-jquery.
+Preparing to unpack .../02-libjs-jquery_3.6.1+dfsg+~3.5.14-1_all.deb ...
+Unpacking libjs-jquery (3.6.1+dfsg+~3.5.14-1) ...
+Selecting previously unselected package libjs-underscore.
+Preparing to unpack .../03-libjs-underscore_1.13.4~dfsg+~1.11.4-3_all.deb ...
+Unpacking libjs-underscore (1.13.4~dfsg+~1.11.4-3) ...
+Selecting previously unselected package libjs-sphinxdoc.
+Preparing to unpack .../04-libjs-sphinxdoc_7.2.6-6_all.deb ...
+Unpacking libjs-sphinxdoc (7.2.6-6) ...
+Selecting previously unselected package libpython3.12-dev:amd64.
+Preparing to unpack .../05-libpython3.12-dev_3.12.3-1ubuntu0.13_amd64.deb ...
+Unpacking libpython3.12-dev:amd64 (3.12.3-1ubuntu0.13) ...
+Selecting previously unselected package libpython3-dev:amd64.
+Preparing to unpack .../06-libpython3-dev_3.12.3-0ubuntu2.1_amd64.deb ...
+Unpacking libpython3-dev:amd64 (3.12.3-0ubuntu2.1) ...
+Selecting previously unselected package python3.12-dev.
+Preparing to unpack .../07-python3.12-dev_3.12.3-1ubuntu0.13_amd64.deb ...
+Unpacking python3.12-dev (3.12.3-1ubuntu0.13) ...
+Selecting previously unselected package python3-dev.
+Preparing to unpack .../08-python3-dev_3.12.3-0ubuntu2.1_amd64.deb ...
+Unpacking python3-dev (3.12.3-0ubuntu2.1) ...
+Selecting previously unselected package python3-wheel.
+Preparing to unpack .../09-python3-wheel_0.42.0-2_all.deb ...
+Unpacking python3-wheel (0.42.0-2) ...
+Selecting previously unselected package python3-pip.
+Preparing to unpack .../10-python3-pip_24.0+dfsg-1ubuntu1.3_all.deb ...
+Unpacking python3-pip (24.0+dfsg-1ubuntu1.3) ...
+Setting up javascript-common (11+nmu1) ...
+Setting up python3-wheel (0.42.0-2) ...
+Setting up libexpat1-dev:amd64 (2.6.1-2ubuntu0.4) ...
+Setting up python3-pip (24.0+dfsg-1ubuntu1.3) ...
+Setting up libjs-jquery (3.6.1+dfsg+~3.5.14-1) ...
+Setting up libjs-underscore (1.13.4~dfsg+~1.11.4-3) ...
+Setting up libpython3.12-dev:amd64 (3.12.3-1ubuntu0.13) ...
+Setting up python3.12-dev (3.12.3-1ubuntu0.13) ...
+Setting up libjs-sphinxdoc (7.2.6-6) ...
+Setting up libpython3-dev:amd64 (3.12.3-0ubuntu2.1) ...
+Setting up python3-dev (3.12.3-0ubuntu2.1) ...
+Processing triggers for man-db (2.12.0-4build2) ...
+Scanning processes...
+Scanning candidates...
+Scanning linux images...
+
+Pending kernel upgrade!
+Running kernel version:
+  6.17.0-1007-aws
+Diagnostics:
+  The currently running kernel version is not the expected kernel version 6.17.0-1012-aws.
+
+Restarting the system to load the new kernel will not be handled automatically, so you should consider rebooting.
+
+Restarting services...
+
+Service restarts being deferred:
+ /etc/needrestart/restart.d/dbus.service
+ systemctl restart networkd-dispatcher.service
+ systemctl restart systemd-logind.service
+ systemctl restart unattended-upgrades.service
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ pip install awscli --break-system-packages
+Defaulting to user installation because normal site-packages is not writeable
+Collecting awscli
+  Downloading awscli-1.44.86-py3-none-any.whl.metadata (11 kB)
+Collecting botocore==1.42.96 (from awscli)
+  Downloading botocore-1.42.96-py3-none-any.whl.metadata (5.9 kB)
+Collecting docutils<=0.19,>=0.18.1 (from awscli)
+  Downloading docutils-0.19-py3-none-any.whl.metadata (2.7 kB)
+Collecting s3transfer<0.17.0,>=0.16.0 (from awscli)
+  Downloading s3transfer-0.16.1-py3-none-any.whl.metadata (1.7 kB)
+Requirement already satisfied: PyYAML<6.1,>=3.10 in /usr/lib/python3/dist-packages (from awscli) (6.0.1)
+Requirement already satisfied: colorama<0.4.7,>=0.2.5 in /usr/lib/python3/dist-packages (from awscli) (0.4.6)
+Collecting rsa<4.8,>=3.1.2 (from awscli)
+  Downloading rsa-4.7.2-py3-none-any.whl.metadata (3.6 kB)
+Requirement already satisfied: jmespath<2.0.0,>=0.7.1 in /usr/lib/python3/dist-packages (from botocore==1.42.96->awscli) (1.0.1)
+Requirement already satisfied: python-dateutil<3.0.0,>=2.1 in /usr/lib/python3/dist-packages (from botocore==1.42.96->awscli) (2.8.2)
+Requirement already satisfied: urllib3!=2.2.0,<3,>=1.25.4 in /usr/lib/python3/dist-packages (from botocore==1.42.96->awscli) (2.0.7)
+Requirement already satisfied: pyasn1>=0.1.3 in /usr/lib/python3/dist-packages (from rsa<4.8,>=3.1.2->awscli) (0.4.8)
+Downloading awscli-1.44.86-py3-none-any.whl (4.6 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.6/4.6 MB 55.2 MB/s eta 0:00:00
+Downloading botocore-1.42.96-py3-none-any.whl (14.9 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 14.9/14.9 MB 71.4 MB/s eta 0:00:00
+Downloading docutils-0.19-py3-none-any.whl (570 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 570.5/570.5 kB 70.4 MB/s eta 0:00:00
+Downloading rsa-4.7.2-py3-none-any.whl (34 kB)
+Downloading s3transfer-0.16.1-py3-none-any.whl (86 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 86.8/86.8 kB 17.2 MB/s eta 0:00:00
+Installing collected packages: rsa, docutils, botocore, s3transfer, awscli
+  WARNING: The scripts pyrsa-decrypt, pyrsa-encrypt, pyrsa-keygen, pyrsa-priv2pub, pyrsa-sign and pyrsa-verify are installed in '/home/ubuntu/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+  WARNING: The script docutils is installed in '/home/ubuntu/.local/bin' which is not on PATH.
+  Consider adding this directory to PATH or, if you prefer to suppress this warning, use --no-warn-script-location.
+Successfully installed awscli-1.44.86 botocore-1.42.96 docutils-0.19 rsa-4.7.2 s3transfer-0.16.1
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ sudo apt install aws-cli -y
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+E: Unable to locate package aws-cli
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ aws configure
+Command 'aws' not found, but can be installed with:
+sudo apt install awscli
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ apt install awscli
+E: Could not open lock file /var/lib/dpkg/lock-frontend - open (13: Permission denied)
+E: Unable to acquire the dpkg frontend lock (/var/lib/dpkg/lock-frontend), are you root?
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ sudo su -
+root@ip-172-31-20-60:~#
+root@ip-172-31-20-60:~#
+root@ip-172-31-20-60:~# apt install awscli
+Reading package lists... Done
+Building dependency tree... Done
+Reading state information... Done
+Package awscli is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+
+E: Package 'awscli' has no installation candidate
+root@ip-172-31-20-60:~#
+root@ip-172-31-20-60:~#
+root@ip-172-31-20-60:~#
+root@ip-172-31-20-60:~#exit
+
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$export PATH="$HOME/.local/bin:$PATH"
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$source ~/.bashrc
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$/home/ubuntu/.local/bin/aws configure
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$sudo ln -s /home/ubuntu/.local/bin/aws /usr/local/bin/aws
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+
+# this step perfomed by sunil
+
+ubuntu@ip-172-31-20-60:~$ aws configure
+AWS Access Key ID [None]:
+AWS Secret Access Key:
+Default region
+Default output format
+
+
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+
+
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ ll
+total 60
+drwxr-x---  8 ubuntu ubuntu 4096 Apr 28 16:31 ./
+drwxr-xr-x  3 root   root   4096 Apr 26 12:20 ../
+-rw-------  1 ubuntu ubuntu  244 Apr 28 16:31 .Xauthority
+drwxrwxr-x  2 ubuntu ubuntu 4096 Apr 27 17:33 .aws/
+-rw-------  1 ubuntu ubuntu 2597 Apr 28 15:12 .bash_history
+-rw-r--r--  1 ubuntu ubuntu  220 Mar 31  2024 .bash_logout
+-rw-r--r--  1 ubuntu ubuntu 3845 Apr 27 15:11 .bashrc
+drwx------  3 ubuntu ubuntu 4096 Apr 27 14:56 .cache/
+-rw-------  1 ubuntu ubuntu   20 Apr 27 17:34 .lesshst
+drwxrwxr-x  5 ubuntu ubuntu 4096 Apr 27 14:56 .local/
+-rw-r--r--  1 ubuntu ubuntu  807 Mar 31  2024 .profile
+drwx------  2 ubuntu ubuntu 4096 Apr 26 12:20 .ssh/
+-rw-r--r--  1 ubuntu ubuntu    0 Apr 26 12:30 .sudo_as_admin_successful
+-rw-------  1 ubuntu ubuntu  726 Apr 27 19:55 .viminfo
+drwxrwxr-x 11 ubuntu ubuntu 4096 Apr 26 13:32 age/
+drwxrwxr-x  2 ubuntu ubuntu 4096 Apr 27 17:36 ajay/
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ cd ajay/
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$ ll
+total 8
+drwxrwxr-x 2 ubuntu ubuntu 4096 Apr 27 17:36 ./
+drwxr-x--- 8 ubuntu ubuntu 4096 Apr 28 16:31 ../
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$ vim syncFilesToBucket.sh
+ubuntu@ip-172-31-20-60:~/ajay$ ll
+total 8
+drwxrwxr-x 2 ubuntu ubuntu 4096 Apr 28 16:34 ./
+drwxr-x--- 8 ubuntu ubuntu 4096 Apr 28 16:34 ../
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$ vim syncFilesToBucket.sh
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$ cat syncFilesToBucket.sh
+#!/bin/bash
+
+# ====== CONFIGURATION ======
+LOCAL_DIR="/home/ubuntu/ajay"
+S3_BUCKET="s3://sunil-demo2026-s3"
+# ===========================
+
+# -------------------------------------------------------
+# Helper: Check if a file already exists in S3
+# -------------------------------------------------------
+file_exists_in_s3() {
+    local filename="$1"
+    aws s3 ls "${S3_BUCKET}/${filename}" > /dev/null 2>&1
+    return $?
+}
+
+# -------------------------------------------------------
+# Sync a single file passed as argument
+# -------------------------------------------------------
+sync_single_file() {
+    local filename="$1"
+    local filepath="${LOCAL_DIR}/${filename}"
+
+    # Check if the file exists in the local directory
+    if [ ! -f "$filepath" ]; then
+        echo "Error: '${filename}' not found in '${LOCAL_DIR}'."
+        exit 1
+    fi
+
+    # Check if the file already exists in S3
+    if file_exists_in_s3 "$filename"; then
+        echo "Skipped: '${filename}' already exists in S3. No upload performed."
+    else
+        echo " Uploading: '${filename}' → ${S3_BUCKET}/"
+        aws s3 cp "$filepath" "${S3_BUCKET}/${filename}"
+        if [ $? -eq 0 ]; then
+            echo " Success: '${filename}' uploaded successfully!"
+        else
+            echo " Failed: Could not upload '${filename}'. Please check your AWS credentials and bucket name."
+            exit 1
+        fi
+    fi
+}
+
+# -------------------------------------------------------
+# Sync all files in the local directory
+# -------------------------------------------------------
+sync_all_files() {
+    echo " Scanning all files in '${LOCAL_DIR}'..."
+    echo ""
+
+    local total=0
+    local uploaded=0
+    local skipped=0
+
+    # Loop through files only (skip subdirectories)
+    for filepath in "${LOCAL_DIR}"/*; do
+        [ -f "$filepath" ] || continue
+
+        filename=$(basename "$filepath")
+        total=$((total + 1))
+
+        if file_exists_in_s3 "$filename"; then
+            echo " Skipped: '${filename}' already exists in S3."
+            skipped=$((skipped + 1))
+        else
+            echo " Uploading: '${filename}'..."
+            aws s3 cp "$filepath" "${S3_BUCKET}/${filename}"
+            if [ $? -eq 0 ]; then
+                echo " Uploaded: '${filename}'"
+                uploaded=$((uploaded + 1))
+            else
+                echo " Failed:   '${filename}'"
+            fi
+        fi
+    done
+
+    echo ""
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+    echo "  Summary:"
+    echo "   Total files found : $total"
+    echo "   Uploaded          : $uploaded"
+    echo "   Skipped (exist)   : $skipped"
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+}
+
+# -------------------------------------------------------
+# MAIN: Check arguments and decide what to run
+# -------------------------------------------------------
+if [ $# -eq 1 ]; then
+    sync_single_file "$1"
+elif [ $# -eq 0 ]; then
+    sync_all_files
+else
+    echo " Invalid usage."
+    echo ""
+    echo "Usage:"
+    echo "   ./syncFilesToBucket.sh                → Sync all files to S3"
+    echo "   ./syncFilesToBucket.sh <filename>     → Sync a specific file to S3"
+    echo ""
+    echo "Examples:"
+    echo "   ./syncFilesToBucket.sh"
+    echo "   ./syncFilesToBucket.sh dummy.pdf"
+    exit 1
+fi
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$ vim getFileFromBucket.sh
+ubuntu@ip-172-31-20-60:~/ajay$ cat getFileFromBucket.sh
+#!/bin/bash
+
+# ====== CONFIGURATION ======
+S3_BUCKET="s3://sunil-demo2026-s3"
+# ===========================
+
+# -------------------------------------------------------
+# Argument is mandatory — exit if not provided
+# -------------------------------------------------------
+if [ $# -ne 1 ]; then
+    echo "Missing argument. A filename is required."
+    echo ""
+    echo "Usage:"
+    echo "   ./getFileFromBucket.sh <filename>"
+    echo ""
+    echo "Example:"
+    echo "   ./getFileFromBucket.sh dummy.pdf"
+    exit 1
+fi
+
+FILENAME="$1"
+CURRENT_DIR="$(pwd)"
+LOCAL_FILEPATH="${CURRENT_DIR}/${FILENAME}"
+
+# -------------------------------------------------------
+# Check if the file already exists in the current directory
+# -------------------------------------------------------
+if [ -f "$LOCAL_FILEPATH" ]; then
+    echo " '${FILENAME}' already exists in the current directory. Nothing to do."
+    echo "   Location: ${LOCAL_FILEPATH}"
+    exit 0
+fi
+
+# -------------------------------------------------------
+# Check if the file exists in S3
+# -------------------------------------------------------
+echo "Looking for '${FILENAME}' in S3 bucket..."
+aws s3 ls "${S3_BUCKET}/${FILENAME}" > /dev/null 2>&1
+
+if [ $? -ne 0 ]; then
+    echo " Error: '${FILENAME}' not found in S3 bucket."
+    echo "   Bucket: ${S3_BUCKET}"
+    echo "   Please upload the file first using syncFilesToBucket.sh"
+    exit 1
+fi
+
+# -------------------------------------------------------
+# Download the file from S3 to the current directory
+# -------------------------------------------------------
+echo " Downloading: '${FILENAME}' → ${CURRENT_DIR}/"
+aws s3 cp "${S3_BUCKET}/${FILENAME}" "${LOCAL_FILEPATH}"
+
+if [ $? -eq 0 ]; then
+    echo " Success: '${FILENAME}' downloaded successfully!"
+    echo "   Location: ${LOCAL_FILEPATH}"
+else
+    echo " Failed: Could not download '${FILENAME}'. Please check your AWS credentials and bucket name."
+    exit 1
+fi
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$ echo "This is file 1" > /home/ubuntu/ajay/test1.txt
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$ echo "This is file 2" > /home/ubuntu/ajay/test2.txt
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$ echo "This is file 3" > /home/ubuntu/ajay/test3.txt
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$ mv getFileFromBucket.sh ../
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$ ll
+total 24
+drwxrwxr-x 2 ubuntu ubuntu 4096 Apr 28 16:47 ./
+drwxr-x--- 8 ubuntu ubuntu 4096 Apr 28 16:47 ../
+-rw-rw-r-- 1 ubuntu ubuntu 3408 Apr 28 16:39 syncFilesToBucket.sh
+-rw-rw-r-- 1 ubuntu ubuntu   15 Apr 28 16:45 test1.txt
+-rw-rw-r-- 1 ubuntu ubuntu   15 Apr 28 16:45 test2.txt
+-rw-rw-r-- 1 ubuntu ubuntu   15 Apr 28 16:46 test3.txt
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$ mv syncFilesToBucket.sh ../
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$ ll
+total 20
+drwxrwxr-x 2 ubuntu ubuntu 4096 Apr 28 16:47 ./
+drwxr-x--- 8 ubuntu ubuntu 4096 Apr 28 16:47 ../
+-rw-rw-r-- 1 ubuntu ubuntu   15 Apr 28 16:45 test1.txt
+-rw-rw-r-- 1 ubuntu ubuntu   15 Apr 28 16:45 test2.txt
+-rw-rw-r-- 1 ubuntu ubuntu   15 Apr 28 16:46 test3.txt
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$
+ubuntu@ip-172-31-20-60:~/ajay$ cd ..
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ ll
+total 68
+drwxr-x---  8 ubuntu ubuntu 4096 Apr 28 16:47 ./
+drwxr-xr-x  3 root   root   4096 Apr 26 12:20 ../
+-rw-------  1 ubuntu ubuntu  244 Apr 28 16:31 .Xauthority
+drwxrwxr-x  2 ubuntu ubuntu 4096 Apr 27 17:33 .aws/
+-rw-------  1 ubuntu ubuntu 2597 Apr 28 15:12 .bash_history
+-rw-r--r--  1 ubuntu ubuntu  220 Mar 31  2024 .bash_logout
+-rw-r--r--  1 ubuntu ubuntu 3845 Apr 27 15:11 .bashrc
+drwx------  3 ubuntu ubuntu 4096 Apr 27 14:56 .cache/
+-rw-------  1 ubuntu ubuntu   20 Apr 27 17:34 .lesshst
+drwxrwxr-x  5 ubuntu ubuntu 4096 Apr 27 14:56 .local/
+-rw-r--r--  1 ubuntu ubuntu  807 Mar 31  2024 .profile
+drwx------  2 ubuntu ubuntu 4096 Apr 26 12:20 .ssh/
+-rw-r--r--  1 ubuntu ubuntu    0 Apr 26 12:30 .sudo_as_admin_successful
+-rw-------  1 ubuntu ubuntu 3954 Apr 28 16:44 .viminfo
+drwxrwxr-x 11 ubuntu ubuntu 4096 Apr 26 13:32 age/
+drwxrwxr-x  2 ubuntu ubuntu 4096 Apr 28 16:47 ajay/
+-rw-rw-r--  1 ubuntu ubuntu 1932 Apr 28 16:44 getFileFromBucket.sh
+-rw-rw-r--  1 ubuntu ubuntu 3408 Apr 28 16:39 syncFilesToBucket.sh
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ chmod 777 getFileFromBucket.sh
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ chmod 777 syncFilesToBucket.sh
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ ll
+total 68
+drwxr-x---  8 ubuntu ubuntu 4096 Apr 28 16:47 ./
+drwxr-xr-x  3 root   root   4096 Apr 26 12:20 ../
+-rw-------  1 ubuntu ubuntu  244 Apr 28 16:31 .Xauthority
+drwxrwxr-x  2 ubuntu ubuntu 4096 Apr 27 17:33 .aws/
+-rw-------  1 ubuntu ubuntu 2597 Apr 28 15:12 .bash_history
+-rw-r--r--  1 ubuntu ubuntu  220 Mar 31  2024 .bash_logout
+-rw-r--r--  1 ubuntu ubuntu 3845 Apr 27 15:11 .bashrc
+drwx------  3 ubuntu ubuntu 4096 Apr 27 14:56 .cache/
+-rw-------  1 ubuntu ubuntu   20 Apr 27 17:34 .lesshst
+drwxrwxr-x  5 ubuntu ubuntu 4096 Apr 27 14:56 .local/
+-rw-r--r--  1 ubuntu ubuntu  807 Mar 31  2024 .profile
+drwx------  2 ubuntu ubuntu 4096 Apr 26 12:20 .ssh/
+-rw-r--r--  1 ubuntu ubuntu    0 Apr 26 12:30 .sudo_as_admin_successful
+-rw-------  1 ubuntu ubuntu 3954 Apr 28 16:44 .viminfo
+drwxrwxr-x 11 ubuntu ubuntu 4096 Apr 26 13:32 age/
+drwxrwxr-x  2 ubuntu ubuntu 4096 Apr 28 16:47 ajay/
+-rwxrwxrwx  1 ubuntu ubuntu 1932 Apr 28 16:44 getFileFromBucket.sh*
+-rwxrwxrwx  1 ubuntu ubuntu 3408 Apr 28 16:39 syncFilesToBucket.sh*
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ ./syncFilesToBucket.sh
+ Scanning all files in '/home/ubuntu/ajay'...
+
+ Uploading: 'test1.txt'...
+upload: ajay/test1.txt to s3://sunil-demo2026-s3/test1.txt
+ Uploaded: 'test1.txt'
+ Uploading: 'test2.txt'...
+upload: ajay/test2.txt to s3://sunil-demo2026-s3/test2.txt
+ Uploaded: 'test2.txt'
+ Uploading: 'test3.txt'...
+upload: ajay/test3.txt to s3://sunil-demo2026-s3/test3.txt
+ Uploaded: 'test3.txt'
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+  Summary:
+   Total files found : 3
+   Uploaded          : 3
+   Skipped (exist)   : 0
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ echo "This is file 4" > /home/ubuntu/ajay/test4.txt
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ ./syncFilesToBucket.sh test4.txt
+ Uploading: 'test4.txt' → s3://sunil-demo2026-s3/
+upload: ajay/test4.txt to s3://sunil-demo2026-s3/test4.txt
+ Success: 'test4.txt' uploaded successfully!
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ ./syncFilesToBucket.sh test1.txt
+Skipped: 'test1.txt' already exists in S3. No upload performed.
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ ./syncFilesToBucket.sh fakefile.txt
+Error: 'fakefile.txt' not found in '/home/ubuntu/ajay'.
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ rm /home/ubuntu/ajay/test1.txt
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ ./getFileFromBucket.sh test1.txt
+Looking for 'test1.txt' in S3 bucket...
+ Downloading: 'test1.txt' → /home/ubuntu/
+download: s3://sunil-demo2026-s3/test1.txt to ./test1.txt
+ Success: 'test1.txt' downloaded successfully!
+   Location: /home/ubuntu/test1.txt
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ ./getFileFromBucket.sh test1.txt
+ 'test1.txt' already exists in the current directory. Nothing to do.
+   Location: /home/ubuntu/test1.txt
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ ./getFileFromBucket.sh ghostfile.txt
+Looking for 'ghostfile.txt' in S3 bucket...
+ Error: 'ghostfile.txt' not found in S3 bucket.
+   Bucket: s3://sunil-demo2026-s3
+   Please upload the file first using syncFilesToBucket.sh
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ ./getFileFromBucket.sh
+Missing argument. A filename is required.
+
+Usage:
+   ./getFileFromBucket.sh <filename>
+
+Example:
+   ./getFileFromBucket.sh dummy.pdf
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ aws s3 ls s3://sunil-demo2026-s3
+2026-04-28 16:49:18         15 test1.txt
+2026-04-28 16:49:20         15 test2.txt
+2026-04-28 16:49:21         15 test3.txt
+2026-04-28 16:49:59         15 test4.txt
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
