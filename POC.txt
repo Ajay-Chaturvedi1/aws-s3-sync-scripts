@@ -579,6 +579,7 @@ ubuntu@ip-172-31-20-60:~/ajay$
 ubuntu@ip-172-31-20-60:~/ajay$
 ubuntu@ip-172-31-20-60:~/ajay$
 ubuntu@ip-172-31-20-60:~/ajay$
+#for testing purpose create some dummy files & sync ALL files
 ubuntu@ip-172-31-20-60:~/ajay$
 ubuntu@ip-172-31-20-60:~/ajay$ echo "This is file 1" > /home/ubuntu/ajay/test1.txt
 ubuntu@ip-172-31-20-60:~/ajay$
@@ -588,6 +589,7 @@ ubuntu@ip-172-31-20-60:~/ajay$
 ubuntu@ip-172-31-20-60:~/ajay$ echo "This is file 3" > /home/ubuntu/ajay/test3.txt
 ubuntu@ip-172-31-20-60:~/ajay$
 ubuntu@ip-172-31-20-60:~/ajay$
+# by mistake I created this script file in ajay folder so I move one directory back this froma ajay folder
 ubuntu@ip-172-31-20-60:~/ajay$
 ubuntu@ip-172-31-20-60:~/ajay$ mv getFileFromBucket.sh ../
 ubuntu@ip-172-31-20-60:~/ajay$
@@ -618,6 +620,8 @@ ubuntu@ip-172-31-20-60:~/ajay$
 ubuntu@ip-172-31-20-60:~/ajay$
 ubuntu@ip-172-31-20-60:~/ajay$
 ubuntu@ip-172-31-20-60:~/ajay$
+#now come to home directory where is our scripts persent
+
 ubuntu@ip-172-31-20-60:~/ajay$ cd ..
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
@@ -645,6 +649,7 @@ drwxrwxr-x  2 ubuntu ubuntu 4096 Apr 28 16:47 ajay/
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
+# give all executable permission on file to execute it 
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$ chmod 777 getFileFromBucket.sh
 ubuntu@ip-172-31-20-60:~$
@@ -681,6 +686,7 @@ ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
+#Run the script with no argument (should upload all 3 files)
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$ ./syncFilesToBucket.sh
  Scanning all files in '/home/ubuntu/ajay'...
@@ -709,6 +715,7 @@ ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
+#Sync a SINGLE specific file for testing purpose
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
@@ -727,12 +734,14 @@ ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
+#for testing single file that already exists in S3
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$ ./syncFilesToBucket.sh test1.txt
 Skipped: 'test1.txt' already exists in S3. No upload performed.
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
+#that file which is not persent in ajay directory
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$ ./syncFilesToBucket.sh fakefile.txt
 Error: 'fakefile.txt' not found in '/home/ubuntu/ajay'.
@@ -744,6 +753,7 @@ ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
+# testing for download a file that is NOT local but exists in S3
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$ rm /home/ubuntu/ajay/test1.txt
 ubuntu@ip-172-31-20-60:~$
@@ -760,6 +770,7 @@ ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
+# File already exists locally (should do nothing)
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$ ./getFileFromBucket.sh test1.txt
  'test1.txt' already exists in the current directory. Nothing to do.
@@ -769,6 +780,7 @@ ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
+# File not exists locally (should do nothing)
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$ ./getFileFromBucket.sh ghostfile.txt
 Looking for 'ghostfile.txt' in S3 bucket...
@@ -779,6 +791,7 @@ ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
+# run without argument
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$ ./getFileFromBucket.sh
 Missing argument. A filename is required.
@@ -794,6 +807,7 @@ ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
+#List all files in your S3 bucket to confirm uploads
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$ aws s3 ls s3://sunil-demo2026-s3
@@ -804,7 +818,43 @@ ubuntu@ip-172-31-20-60:~$ aws s3 ls s3://sunil-demo2026-s3
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
+#after all testing delete all files 
 ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ aws s3 ls
+2026-04-27 16:30:23 sunil-demo2026-s3
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ aws s3 rm s3://sunil-demo2026-s3/test1.txt
+delete: s3://sunil-demo2026-s3/test1.txt
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ aws s3 rm s3://sunil-demo2026-s3/test2.txt
+
+delete: s3://sunil-demo2026-s3/test2.txt
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ aws s3 rm s3://sunil-demo2026-s3/test3.txt
+delete: s3://sunil-demo2026-s3/test3.txt
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ aws s3 rm s3://sunil-demo2026-s3/test4.txt
+delete: s3://sunil-demo2026-s3/test4.txt
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$
+ubuntu@ip-172-31-20-60:~$ aws s3 ls s3://sunil-demo2026-s3
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
