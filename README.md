@@ -54,8 +54,8 @@ aws configure
 
 ### 2. Clone this repository
 ```bash
-git clone https://github.com/your-username/your-repo-name.git
-cd your-repo-name
+git clone https://github.com/Ajay-Chaturvedi1/aws-s3-sync-scripts/
+cd Ajay-Chaturvedi1
 ```
 
 ### 3. Make scripts executable
