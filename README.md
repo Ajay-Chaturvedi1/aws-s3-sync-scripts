@@ -11,6 +11,47 @@ sudo apt update && sudo apt install awscli -y
 aws configure   # Enter your Access Key, Secret Key, Region
 ```
 
+### if awscli package is unable to install then
+```bash
+# Install Python3 and pip
+sudo apt install python3-pip -y
+
+# Install AWS CLI using pip
+pip install awscli --break-system-packages
+```
+Note: The --break-system-packages flag is required for Ubuntu 24.04+ to bypass the external package manager protection.
+
+#### Add AWS CLI to PATH
+AWS CLI gets installed in ~/.local/bin which needs to be added to your PATH.
+Option A: Add to PATH permanently (Recommended)
+```bash
+# Add to PATH for current session
+export PATH="$HOME/.local/bin:$PATH"
+
+# Make it permanent by adding to .bashrc
+echo 'export PATH="$HOME/.local/bin:$PATH"' >> ~/.bashrc
+
+# Reload .bashrc
+source ~/.bashrc
+```
+
+Option B: Create symbolic link
+```bash
+sudo ln -s /home/$USER/.local/bin/aws /usr/local/bin/aws
+```
+
+#### Verify Installation
+```bash
+aws --version
+```
+
+
+#### Configure AWS CLI
+```bash
+aws configure
+```
+
+
 ### 2. Clone this repository
 ```bash
 git clone https://github.com/your-username/your-repo-name.git
