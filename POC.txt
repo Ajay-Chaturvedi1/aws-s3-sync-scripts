@@ -731,6 +731,11 @@ upload: ajay/test4.txt to s3://sunil-demo2026-s3/test4.txt
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
+# if ajay directory file is not persent in sunil bucket and run script without argument
+
+
+
+
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
 ubuntu@ip-172-31-20-60:~$
